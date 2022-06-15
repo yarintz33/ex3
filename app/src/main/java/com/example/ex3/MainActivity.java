@@ -21,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
         Button loginBtn = findViewById(R.id.loginBtn);
         loginBtn.setOnClickListener(view -> {
-            Intent i = new Intent(this, ChatActivity.class);
+//            Intent i = new Intent(this, ChatActivity.class);
+            Intent i = new Intent(this, ContactsList.class);
             startActivity(i);
         });
     }
