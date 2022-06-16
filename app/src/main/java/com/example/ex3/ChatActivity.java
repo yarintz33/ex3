@@ -38,14 +38,14 @@ public class ChatActivity extends AppCompatActivity {
         FloatingActionButton addBtn = findViewById(R.id.addBtn);
         viewModel = new ViewModelProvider(this).get(SampleViewModel.class);
         // foo is the updated string.. we set the string as the title (on top of the activity page)
-        viewModel.getFoo().observe(this, foo -> getSupportActionBar().setTitle(foo));
+        viewModel.getDate().observe(this, date -> getSupportActionBar().setTitle(date));
 
         //FloatingActionButton btnAdd = findViewById(R.id.addBtn);
         addBtn.setOnClickListener(view -> {
             Intent i = new Intent(this,FormActivity.class);
             startActivity(i);
             String currentDateTime = DateFormat.getDateTimeInstance().format(new Date());
-            viewModel.getFoo().setValue(currentDateTime);
+            viewModel.getDate().setValue(currentDateTime);
         });
 
 

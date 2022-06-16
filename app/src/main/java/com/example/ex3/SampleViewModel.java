@@ -5,12 +5,12 @@ import androidx.lifecycle.ViewModel;
 
 public class SampleViewModel extends ViewModel {
 
-     private MutableLiveData<String> foo;
+     private MutableLiveData<String> date;
 
-    public MutableLiveData<String> getFoo() {
-        if (foo == null) {
-            foo = new MutableLiveData<String>();
+    public MutableLiveData<String> getDate() {
+        if (date == null) {
+            date = new MutableLiveData<String>();
         }
-         return foo;
+         return date;
     }
 }
